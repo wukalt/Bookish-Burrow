@@ -5,6 +5,12 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaDuck.Web", "KalaDuck.Web\KalaDuck.Web.csproj", "{AB799031-B42D-4EA5-BD39-A710AD4F2887}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaDuck.Models", "KalaDuck.Models\KalaDuck.Models.csproj", "{66116ECB-9A45-4406-9BA2-D9B679B8B901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaDuck.Utility", "KalaDuck.Utility\KalaDuck.Utility.csproj", "{8D5400E4-4918-42DF-92FF-EFA71B4B5E0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalaDuck.DataAccess", "KalaDuck.DataAccess\KalaDuck.DataAccess.csproj", "{07DBE4C8-EF85-4E35-9E5E-EE1123C0D0AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{AB799031-B42D-4EA5-BD39-A710AD4F2887}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB799031-B42D-4EA5-BD39-A710AD4F2887}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB799031-B42D-4EA5-BD39-A710AD4F2887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66116ECB-9A45-4406-9BA2-D9B679B8B901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66116ECB-9A45-4406-9BA2-D9B679B8B901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66116ECB-9A45-4406-9BA2-D9B679B8B901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66116ECB-9A45-4406-9BA2-D9B679B8B901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5400E4-4918-42DF-92FF-EFA71B4B5E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5400E4-4918-42DF-92FF-EFA71B4B5E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5400E4-4918-42DF-92FF-EFA71B4B5E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5400E4-4918-42DF-92FF-EFA71B4B5E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07DBE4C8-EF85-4E35-9E5E-EE1123C0D0AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07DBE4C8-EF85-4E35-9E5E-EE1123C0D0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07DBE4C8-EF85-4E35-9E5E-EE1123C0D0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07DBE4C8-EF85-4E35-9E5E-EE1123C0D0AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
