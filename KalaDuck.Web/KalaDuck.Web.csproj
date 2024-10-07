@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\KalaDuck.DataAccess\KalaDuck.DataAccess.csproj" />
     <ProjectReference Include="..\KalaDuck.Models\KalaDuck.Models.csproj" />
     <ProjectReference Include="..\KalaDuck.Utility\KalaDuck.Utility.csproj" />
