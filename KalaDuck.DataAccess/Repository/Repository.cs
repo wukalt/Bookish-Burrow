@@ -25,9 +25,18 @@ namespace KalaDuck.DataAccess.Repository
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task<IEnumerable<T>> GetAll()
+        public async Task<IEnumerable<T>> GetAll(int taken = 0)
         {
-            return await _dbSet.ToListAsync();
+            if (!NeedToTake(taken))
+            {
+                return await _dbSet.ToListAsync();
+            }
+            return await _dbSet.Take(taken).ToListAsync();
+        }
+
+        private bool NeedToTake(int taken)
+        {
+            return taken != 0 ? true : false;
         }
 
         public async Task Remove(T entity)
