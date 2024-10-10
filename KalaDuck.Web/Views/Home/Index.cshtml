@@ -1,30 +1,50 @@
-﻿@{
+﻿@model IEnumerable<Book>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <main>
-        <section id="banners">
-            <div class="container">
-                <div class="banners">
-                    <div class="banner b1"><a href="#" class="banner_link"><img src="../../banner1.jpg" alt=""
-                                class="banner_link-img"></a></div>
-                    <div class="banner b2"><a href="#" class="banner_link"><img src="../../banner2.jpg" alt=""
-                                class="banner_link-img"></a></div>
-                    <div class="banner b3"><a href="#" class="banner_link"><img src="../../banner3.jpg" alt=""
-                                class="banner_link-img"></a></div>
-                    <div class="banner b4"><a href="#" class="banner_link"><img src="../../banner4.webp" alt=""
-                                class="banner_link-img"></a></div>
+    <section id="banners">
+        <div class="container">
+            <div class="banners">
+                <div class="banner b1">
+                    <a href="#" class="banner_link">
+                        <img src="../../banner1.jpg" alt=""
+                             class="banner_link-img">
+                    </a>
+                </div>
+                <div class="banner b2">
+                    <a href="#" class="banner_link">
+                        <img src="../../banner2.jpg" alt=""
+                             class="banner_link-img">
+                    </a>
+                </div>
+                <div class="banner b3">
+                    <a href="#" class="banner_link">
+                        <img src="../../banner3.jpg" alt=""
+                             class="banner_link-img">
+                    </a>
+                </div>
+                <div class="banner b4">
+                    <a href="#" class="banner_link">
+                        <img src="../../banner4.webp" alt=""
+                             class="banner_link-img">
+                    </a>
                 </div>
             </div>
-        </section>
-        <section id="products">
-            <div class="container">
-                <div class="head">
-                    <h2 class="products_title">Last Products</h2>
-                    <a asp-controller="Shop" asp-action="Index" class="products_shop psheader">Shop Now!</a>
-                </div>
-                <div class="products">
-                    <div class="product"><a href="" class="card">
+        </div>
+    </section>
+    <section id="products">
+        <div class="container">
+            <div class="head">
+                <h2 class="products_title">Last Products</h2>
+                <a asp-controller="Shop" asp-action="Index" class="products_shop psheader">Shop Now!</a>
+            </div>
+            <div class="products">
+                @foreach (var item in Model)
+                {
+                    <div class="product">
+                        <a href="" class="card">
                             <!-- <img src="lf.webp" class="card_image" alt="" /> -->
                             <!-- <svg class="card_arc" xmlns="http://www.w3.org/2000/svg" fill="#000">
                                 <path />
@@ -36,13 +56,13 @@
                                         <div class="card_status">
                                             <div class="card_status-sub">
                                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="svg_price"
-                                                    viewBox="0 0 1280.000000 1280.000000"
-                                                    preserveAspectRatio="xMidYMid meet">
+                                                     viewBox="0 0 1280.000000 1280.000000"
+                                                     preserveAspectRatio="xMidYMid meet">
                                                     <metadata>
                                                         Created by potrace 1.15, written by Peter Selinger 2001-2017
                                                     </metadata>
                                                     <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                                                        stroke="none">
+                                                       stroke="none">
                                                         <path d="M7175 12143 c-851 -76 -1533 -478 -2082 -1227 -406 -553 -641 -1235
                                                             -704 -2038 -15 -199 -7 -810 15 -1028 17 -171 63 -528 72 -567 l6 -23 -493 -2
                                                             -493 -3 -72 -420 c-166 -968 -214 -1248 -214 -1256 0 -5 299 -9 706 -9 l706 0
@@ -60,15 +80,14 @@
                                                             447 -86 629 -257 223 -209 380 -571 456 -1050 29 -185 28 -180 49 -180 10 0
                                                             358 41 774 90 416 50 764 90 773 90 18 0 16 30 -12 295 -67 610 -252 1155
                                                             -538 1583 -120 180 -194 271 -340 417 -390 389 -852 606 -1428 670 -121 13
-                                                            -497 18 -613 8z" 
-                                                        />
+                                                            -497 18 -613 8z" />
                                                     </g>
                                                 </svg>
                                                 <p class="sub-price">20.99 dollars</p>
                                             </div>
                                             <div class="card_status-sub">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="svg_star"
-                                                    viewBox="0 0 260 245">
+                                                     viewBox="0 0 260 245">
                                                     <path d="m56,237 74-228 74,228L10,96h240" />
                                                 </svg>
                                                 <p class="sub-score">4.5</p>
@@ -76,22 +95,23 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="card-description">Each chapter is relatively self-contained, presenting an
+                                <p class="card-description">
+                                    Each chapter is relatively self-contained, presenting an
                                     algorithm, a design technique, an application area, or a related topic Each chapter
                                     is relatively self-contained, presenting an
                                     algorithm, a design technique, an application area, or a related topic Each chapter
                                     is relatively self-contained, presenting an
-                                    algorithm, a design technique ...</p>
+                                    algorithm, a design technique ...
+                                </p>
                                 <button class="card_addtocard">Add to Card</button>
 
                             </div>
-                        </a></div>
-                    <div class="product"></div>
-                    <div class="product"></div>
-                    <div class="product"></div>
-                </div>
-                <a href="#" class="products_shop psfooter">Shop Now!</a>
-
+                        </a>
+                    </div>
+                }
             </div>
-        </section>
-    </main>
+            <a href="#" class="products_shop psfooter">Shop Now!</a>
+
+        </div>
+    </section>
+</main>
