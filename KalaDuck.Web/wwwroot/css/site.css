@@ -1,12 +1,13 @@
 @font-face {
-  font-family: 'Shabnam';
-  src: url('../fonts/Shabnam-FD.eot'),
-    url('../fonts/Shabnam-FD.woff') format('woff'),
-    url('../fonts/Shabnam-FD.ttf');
+  font-family: 'Brooklyn';
+  src: url('../fonts/Brooklyn-Normal.eot'),
+    url('../fonts/Brooklyn-Normal.woff') format('woff'),
+    url('../fonts/Brooklyn-Normal.woff2') format('woff2'),
+    url('../fonts/Brooklyn-Normal.ttf');
 }
 
 * {
-  font-family: "Shabnam";
+  font-family: "Brooklyn";
 }
 
 html {
@@ -37,7 +38,7 @@ section {
 }
 
 .container {
-  width: 75%;
+  width: 1280px;
   margin: 0 auto 0;
 }
 
@@ -70,6 +71,13 @@ svg {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+}
+
+.header_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .menu {
@@ -107,6 +115,7 @@ svg {
   border-radius: 8px;
   border: 2px solid var(--primary);
   transition: all 0.3s;
+  margin-left: 20px;
 }
 
 .header_login:hover {
@@ -306,14 +315,15 @@ svg {
 }
 
 
-.svg_star {
-  width: 20px;
-  height: 20px;
+.score-sign i {
+  color: var(--primary);
+  font-size: 20px;
 }
 
-.svg_price {
-  width: 20px;
-  height: 20px;
+.price-sign {
+  color: var(--primary);
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 
@@ -399,30 +409,35 @@ svg {
   border-bottom: 1px solid var(--primary);
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1680px) {
 
   .products {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
 }
 
 @media screen and (max-width: 1280px) {
   .products {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+  .container {
+    width: 1024px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .container {
-    width: 85%;
+    width: 768px;
   }
-
+  .products {
+    grid-template-columns: 1fr 1fr ;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .container {
-    width: 95%;
+    width: 600px;
   }
 
   .card {
