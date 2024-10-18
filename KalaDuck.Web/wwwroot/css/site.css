@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Brooklyn';
-  src: url('.././KalaDuck.Web/wwwroot/fonts/Brooklyn-Normal.eot'),
-    url('.././KalaDuck.Web/wwwroot/fonts/Brooklyn-Normal.woff') format('woff'),
-    url('.././KalaDuck.Web/wwwroot/fonts/Brooklyn-Normal.woff2') format('woff2'),
-    url('.././KalaDuck.Web/wwwroot/fonts/Brooklyn-Normal.ttf');
+  src: url('../fonts/Brooklyn-Normal.eot'),
+    url('../fonts/Brooklyn-Normal.woff') format('woff'),
+    url('../fonts/Brooklyn-Normal.woff2') format('woff2'),
+    url('../fonts/Brooklyn-Normal.ttf');
 }
 
 * {
