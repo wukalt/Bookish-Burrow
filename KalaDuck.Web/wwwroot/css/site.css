@@ -19,7 +19,7 @@ html {
 body {
   margin: 0;
   --primary: #023047;
-  --secondary: #ffb703;
+  --secondary: #20bf55;
   --bg: #fefefe;
   background-color: var(--bg);
 }
@@ -111,7 +111,7 @@ svg {
 .header_login {
   padding: 12px 24px;
   background-color: var(--primary);
-  color: var(--secondary);
+  color: var(--bg);
   border-radius: 8px;
   border: 2px solid var(--primary);
   transition: all 0.3s;
@@ -120,7 +120,6 @@ svg {
 
 .header_login:hover {
   background-color: var(--secondary);
-  color: var(--primary);
   border: 2px solid var(--primary);
 }
 
@@ -176,7 +175,7 @@ svg {
   text-align: center;
   padding: 14px 28px;
   border-radius: 8px;
-  color: var(--primary);
+  color: var(--bg);
   background-color: var(--secondary);
   border: 2px solid var(--secondary);
   transition: all 0.3s;
@@ -190,7 +189,6 @@ svg {
 
 .products_shop:hover {
   background-color: var(--primary);
-  color: var(--secondary);
 }
 
 .products {
@@ -317,12 +315,10 @@ svg {
 
 
 .score-sign i {
-  color: var(--primary);
   font-size: 20px;
 }
 
-.price-sign {
-  color: var(--primary);
+.price-sign i{
   font-size: 20px;
   margin-top: 10px;
 }
