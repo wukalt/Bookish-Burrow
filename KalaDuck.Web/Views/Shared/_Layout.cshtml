@@ -11,12 +11,12 @@
     <header id="header">
         <div class="container">
             <div class="header">
-                <a href="#" class="header_logo">KalaDuck</a>
+                <a asp-controller="Home" asp-action="Index" class="header_logo">KalaDuck</a>
                 <div class="header_menu">
                     <nav class="menu">
-                        <a href="#" class="menu_link">Shop</a>
-                        <a href="#" class="menu_link">About us</a>
-                        <a href="#" class="menu_link">Contact us</a>
+                        <a asp-controller="Shop" asp-action="Index" class="menu_link">Shop</a>
+                        <a asp-controller="Home" asp-action="AboutUs" class="menu_link">About us</a>
+                        <a asp-controller="Home" asp-action="ContactUs" class="menu_link">Contact us</a>
                     </nav>
                     <a href="#" class="header_login">Login</a>
                 </div>
@@ -43,10 +43,10 @@
                 </div>
                 <div class="quickaccess">
                     <h3 class="footer_title">Quick Access</h3>
-                    <a href="#" class="footer_quickaccess-link">Shop</a>
-                    <a href="#" class="footer_quickaccess-link">About us</a>
-                    <a href="#" class="footer_quickaccess-link">Contact us</a>
-                    <a href="#" class="footer_quickaccess-link">Legal</a>
+                    <a asp-controller="Shop" asp-action="Index" class="footer_quickaccess-link">Shop</a>
+                    <a asp-controller="Home" asp-action="AboutUs" class="footer_quickaccess-link">About us</a>
+                    <a asp-controller="Home" asp-action="ContactUs" class="footer_quickaccess-link">Contact us</a>
+                    <a asp-controller="Home" asp-action="Privacy" class="footer_quickaccess-link">Privacy</a>
                 </div>
                 <div class="contact">
                     <h3 class="footer_title">Contact Us</h3>
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">&copy; 2024 KalaDuck. Designed by <a href="https://github.com/Sasslak">Sasslak</a></div>
+        <div class="copyright">&copy; 2024 KalaDuck. All Rights Reserved.</div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
