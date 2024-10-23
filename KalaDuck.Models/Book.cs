@@ -9,6 +9,8 @@ namespace KalaDuck.Models
         public string ShortDescription { get; set; } = null!;
         public string ImageUrl { get; set; } = null!;
         public DateTime ReleaseDateTime { get; set; } = DateTime.Now;
+        public decimal Price { get; set; }
+        public float Point { get; set; }
 
         [ForeignKey("Author")]
         public int AuthorId { get; set; }

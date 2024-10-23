@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using KalaDuck.DataAccess.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace KalaDuck.Web.Controllers
 {
     public class ShopController : Controller
     {
-        public IActionResult Index()
+        private readonly IUnitOfWork _unitOfWork;
+
+        public ShopController(IUnitOfWork unitOfWork)
         {
-            return View();
+            _unitOfWork = unitOfWork;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var products = await _unitOfWork.Book.GetAll();
+            return View(products);
         }
     }
 }

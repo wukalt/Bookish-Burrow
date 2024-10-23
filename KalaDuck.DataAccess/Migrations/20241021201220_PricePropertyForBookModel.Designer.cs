@@ -4,6 +4,7 @@ using KalaDuck.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KalaDuck.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241021201220_PricePropertyForBookModel")]
+    partial class PricePropertyForBookModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,9 +85,6 @@ namespace KalaDuck.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("Point")
-                        .HasColumnType("real");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
@@ -111,9 +111,8 @@ namespace KalaDuck.DataAccess.Migrations
                             Id = 1,
                             AuthorId = 1,
                             ImageUrl = "https://m.media-amazon.com/images/I/71uiG3qqKaL._AC_UF1000,1000_QL80_.jpg",
-                            Point = 0f,
                             Price = 0m,
-                            ReleaseDateTime = new DateTime(2024, 10, 21, 23, 47, 56, 541, DateTimeKind.Local).AddTicks(1876),
+                            ReleaseDateTime = new DateTime(2024, 10, 21, 23, 42, 19, 139, DateTimeKind.Local).AddTicks(9009),
                             ShortDescription = "One of the most visited book for python in 2024.A Guid Line of learning python",
                             Title = "Python Crash Course"
                         },
@@ -122,9 +121,8 @@ namespace KalaDuck.DataAccess.Migrations
                             Id = 2,
                             AuthorId = 2,
                             ImageUrl = "https://m.media-amazon.com/images/I/61YKrMbrdGL._AC_UF1000,1000_QL80_.jpg",
-                            Point = 0f,
                             Price = 0m,
-                            ReleaseDateTime = new DateTime(2024, 10, 21, 23, 47, 56, 541, DateTimeKind.Local).AddTicks(1889),
+                            ReleaseDateTime = new DateTime(2024, 10, 21, 23, 42, 19, 139, DateTimeKind.Local).AddTicks(9021),
                             ShortDescription = "One of the most visited book for C# in 2024.A Guid Line of learning C#",
                             Title = "C# 12 And .NET 8"
                         });
