@@ -18,8 +18,8 @@ html {
 
 body {
   margin: 0;
-  --primary: #023047;
-  --secondary: #20bf55;
+  --primary: #001b26;
+  --secondary: #2d596f;
   --bg: #fefefe;
   background-color: var(--bg);
 }
@@ -34,7 +34,7 @@ main {
 }
 
 section {
-  padding: 50px 0;
+  padding: 40px 0;
 }
 
 .container {
@@ -53,13 +53,14 @@ svg {
   top: 0px;
   z-index: 999;
   transition: 0.2s;
-  background-color: var(--secondary);
+  background-color: var(--primary);
+  /* border-bottom: 2px solid var(--primary); */
 }
 
 .header-sticky {
   top: 0;
   z-index: 999;
-  background-color: var(--secondary);
+  background-color: var(--primary);
 }
 
 .header-icon {
@@ -91,10 +92,10 @@ svg {
 }
 
 .menu_link {
-  border-bottom: 2px solid var(--primary);
+  border-bottom: 2px solid var(--secondary);
   padding-bottom: 3px;
   transition: all 0.2s;
-  color: var(--primary)
+  color: var(--bg)
 }
 
 .menu_link:hover {
@@ -106,29 +107,29 @@ svg {
   font-size: 32px;
   font-weight: 700;
   margin-right: 30px;
+  color: var(--bg);
 }
 
 .header_login {
   padding: 12px 24px;
-  background-color: var(--primary);
-  color: var(--bg);
+  background-color: var(--bg);
+  color: var(--primary);
   border-radius: 8px;
-  border: 2px solid var(--primary);
+  border: 1px solid var(--primary);
   transition: all 0.3s;
   margin-left: 20px;
 }
 
 .header_login:hover {
-  background-color: var(--secondary);
-  border: 2px solid var(--primary);
+  background-color: var(--primary);
+  border: 1px solid var(--bg);
+  color: var(--bg);
 }
 
 .banners {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 3fr 3fr 2fr;
-  grid-template-rows: 2fr 1fr;
-  height: 45rem;
+  display: flex;
+  gap: px;
+  flex-direction: column;
 }
 
 .banner {
@@ -143,14 +144,14 @@ svg {
   object-fit: cover;
 }
 
-.banners>.b1 {
-  grid-column: 1 / span 2;
-  grid-row: 1;
+.b1,
+.b3 {
+  height: 10rem;
 }
 
-.banners>.b2 {
-  grid-column: 3;
-  grid-row: 1 / span 2;
+.b2 {
+  height: 25rem;
+
 }
 
 .head {
@@ -176,8 +177,8 @@ svg {
   padding: 14px 28px;
   border-radius: 8px;
   color: var(--bg);
-  background-color: var(--secondary);
-  border: 2px solid var(--secondary);
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -188,7 +189,8 @@ svg {
 }
 
 .products_shop:hover {
-  background-color: var(--primary);
+  background-color: var(--bg);
+  color: var(--primary);
 }
 
 .products {
@@ -223,7 +225,7 @@ svg {
 .card_overlay {
   z-index: 1;
   border-radius: 0;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   transform: translateY(21rem);
   transition: 0.2s ease-in-out;
   overflow: hidden;
@@ -231,6 +233,7 @@ svg {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  color: var(--bg);
 }
 
 .card:hover .card_overlay {
@@ -239,7 +242,7 @@ svg {
 
 .card_header {
   transition: .2s ease-in-out;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   height: 6rem;
 }
 
@@ -250,11 +253,11 @@ svg {
 .card_addtocard {
   display: block;
   width: 60%;
-  background-color: var(--primary);
+  background-color: var(--bg);
   margin: 0 auto 0;
-  color: var(--bg);
+  color: var(--primary);
   outline: none;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--bg);
   border-radius: 4px;
   margin-bottom: 20px;
   cursor: pointer;
@@ -263,13 +266,13 @@ svg {
 }
 
 .card_addtocard:hover {
-  background-color: var(--secondary);
-  color: var(--primary);
+  background-color: var(--primary);
+  color: var(--bg);
 
 }
 
 .card_arc path {
-  fill: var(--secondary);
+  fill: var(--primary);
   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }
 
@@ -279,7 +282,6 @@ svg {
 }
 
 .card:hover .card_title {
-  color: var(--primary);
   transition: all 1s;
 }
 
@@ -304,12 +306,12 @@ svg {
   font-size: 24px;
   font-weight: 600;
   margin: 8px 0 0 6px;
-  color: var(--primary);
+  color: var(--bg);
 }
 
 .sub-score {
   margin: 8px 0 0 6px;
-  color: var(--primary);
+  color: var(--bg);
   font-weight: 600;
 }
 
@@ -318,7 +320,7 @@ svg {
   font-size: 20px;
 }
 
-.price-sign i{
+.price-sign i {
   font-size: 20px;
   margin-top: 10px;
 }
@@ -397,7 +399,7 @@ svg {
 .copyright {
   padding: 10px;
   margin-top: 40px;
-  background-color: var(--secondary);
+  background-color: var(--bg);
   text-align: center;
   color: var(--primary);
 }
@@ -540,7 +542,7 @@ svg {
   .container {
     width: 456px;
   }
-  
+
   .products {
     grid-template-columns: 1fr;
   }
@@ -567,7 +569,7 @@ svg {
 }
 
 @media screen and (max-width: 456px) {
-  
+
   section {
     padding: 30px 0;
   }
@@ -575,7 +577,7 @@ svg {
   .container {
     width: 320px;
   }
-  
+
   .products {
     grid-template-columns: 1fr;
   }
@@ -594,7 +596,8 @@ svg {
     height: 35rem;
   }
 
-  .banners>.b2, .banners>.b3 {
+  .banners>.b2,
+  .banners>.b3 {
     display: none;
   }
 
