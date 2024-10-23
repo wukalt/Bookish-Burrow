@@ -20,8 +20,8 @@ namespace KalaDuck.DataAccess.Data
             );
 
             modelBuilder.Entity<Book>().HasData(
-                new Book() { Id = 1, Title = "Python Crash Course", ShortDescription = "One of the most visited book for python in 2024.A Guid Line of learning python", AuthorId = 1, ImageUrl= "https://m.media-amazon.com/images/I/71uiG3qqKaL._AC_UF1000,1000_QL80_.jpg" },
-                new Book() { Id = 2, Title = "C# 12 And .NET 8", ShortDescription = "One of the most visited book for C# in 2024.A Guid Line of learning C#", AuthorId = 2, ImageUrl = "https://m.media-amazon.com/images/I/61YKrMbrdGL._AC_UF1000,1000_QL80_.jpg" }
+                new Book() { Id = 1, Title = "Python Crash Course", Description = "One of the most visited book for python in 2024.A Guid Line of learning python", AuthorId = 1, ImageUrl= "https://m.media-amazon.com/images/I/71uiG3qqKaL._AC_UF1000,1000_QL80_.jpg" },
+                new Book() { Id = 2, Title = "C# 12 And .NET 8", Description = "One of the most visited book for C# in 2024.A Guid Line of learning C#", AuthorId = 2, ImageUrl = "https://m.media-amazon.com/images/I/61YKrMbrdGL._AC_UF1000,1000_QL80_.jpg" }
             );
         }
     }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KalaDuck.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241021201757_PointPropertyForBookModel")]
-    partial class PointPropertyForBookModel
+    [Migration("20241023085704_InitialDb")]
+    partial class InitialDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -81,6 +81,10 @@ namespace KalaDuck.DataAccess.Migrations
                     b.Property<int>("AuthorId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -93,10 +97,6 @@ namespace KalaDuck.DataAccess.Migrations
 
                     b.Property<DateTime>("ReleaseDateTime")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("ShortDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -113,22 +113,22 @@ namespace KalaDuck.DataAccess.Migrations
                         {
                             Id = 1,
                             AuthorId = 1,
+                            Description = "One of the most visited book for python in 2024.A Guid Line of learning python",
                             ImageUrl = "https://m.media-amazon.com/images/I/71uiG3qqKaL._AC_UF1000,1000_QL80_.jpg",
                             Point = 0f,
                             Price = 0m,
-                            ReleaseDateTime = new DateTime(2024, 10, 21, 23, 47, 56, 541, DateTimeKind.Local).AddTicks(1876),
-                            ShortDescription = "One of the most visited book for python in 2024.A Guid Line of learning python",
+                            ReleaseDateTime = new DateTime(2024, 10, 23, 12, 27, 4, 382, DateTimeKind.Local).AddTicks(7513),
                             Title = "Python Crash Course"
                         },
                         new
                         {
                             Id = 2,
                             AuthorId = 2,
+                            Description = "One of the most visited book for C# in 2024.A Guid Line of learning C#",
                             ImageUrl = "https://m.media-amazon.com/images/I/61YKrMbrdGL._AC_UF1000,1000_QL80_.jpg",
                             Point = 0f,
                             Price = 0m,
-                            ReleaseDateTime = new DateTime(2024, 10, 21, 23, 47, 56, 541, DateTimeKind.Local).AddTicks(1889),
-                            ShortDescription = "One of the most visited book for C# in 2024.A Guid Line of learning C#",
+                            ReleaseDateTime = new DateTime(2024, 10, 23, 12, 27, 4, 382, DateTimeKind.Local).AddTicks(7526),
                             Title = "C# 12 And .NET 8"
                         });
                 });
