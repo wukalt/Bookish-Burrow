@@ -18,7 +18,7 @@
                         <a asp-controller="Home" asp-action="AboutUs" class="menu_link">About us</a>
                         <a asp-controller="Home" asp-action="ContactUs" class="menu_link">Contact us</a>
                     </nav>
-                    <a href="#" class="header_login">Login</a>
+                    <partial name="_LoginPartial" />
                 </div>
                 <span class="header-icon"><i class="fa fa-bars"></i></span>
             </div>
@@ -35,11 +35,13 @@
             <div class="footer">
                 <div class="about">
                     <a href="#" class="footer_logo">KalaDuck</a>
-                    <p class="about_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi minus labore
+                    <p class="about_txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi minus labore
                         impedit id voluptate aperiam, tempore sunt dolorem porro repudiandae dicta pariatur sit animi
                         distinctio corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quos quod,
                         repellendus recusandae molestias assumenda libero voluptatibus esse. Dignissimos mollitia itaque
-                        fuga, repudiandae accusantium maiores quisquam.</p>
+                        fuga, repudiandae accusantium maiores quisquam.
+                    </p>
                 </div>
                 <div class="quickaccess">
                     <h3 class="footer_title">Quick Access</h3>
