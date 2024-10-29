@@ -29,4 +29,8 @@
     <ProjectReference Include="..\KalaDuck.Utility\KalaDuck.Utility.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\Admin\" />
+  </ItemGroup>
+
 </Project>
