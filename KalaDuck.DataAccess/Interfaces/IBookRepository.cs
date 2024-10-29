@@ -1,9 +1,8 @@
 ﻿using KalaDuck.Models;
 
-namespace KalaDuck.DataAccess.Interfaces
+namespace KalaDuck.DataAccess.Interfaces;
+
+public interface IBookRepository : IRepository<Book>
 {
-    public interface IBookRepository : IRepository<Book>
-    {
-        void Update(Book book);
-    }
+    void Update(Book book);
 }

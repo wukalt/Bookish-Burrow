@@ -2,20 +2,19 @@
 using KalaDuck.DataAccess.Interfaces;
 using KalaDuck.Models;
 
-namespace KalaDuck.DataAccess.Repository
+namespace KalaDuck.DataAccess.Repository;
+
+public class BookRepository : Repository<Book>, IBookRepository
 {
-    public class BookRepository : Repository<Book>, IBookRepository
+    private readonly ApplicationDbContext _context;
+
+    public BookRepository(ApplicationDbContext context) : base(context)
     {
-        private readonly ApplicationDbContext _context;
+        _context = context;
+    }
 
-        public BookRepository(ApplicationDbContext context) : base(context)
-        {
-            _context = context;
-        }
-
-        public void Update(Book book)
-        {
-            _context.Books.Update(book);
-        }
+    public void Update(Book book)
+    {
+        _context.Books.Update(book);
     }
 }

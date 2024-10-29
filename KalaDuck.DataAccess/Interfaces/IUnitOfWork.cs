@@ -1,10 +1,7 @@
-﻿using KalaDuck.DataAccess.Repository;
+﻿namespace KalaDuck.DataAccess.Interfaces;
 
-namespace KalaDuck.DataAccess.Interfaces
+public interface IUnitOfWork
 {
-    public interface IUnitOfWork
-    {
-        IBookRepository Book { get; }
-        Task Commit();
-    }
+    IBookRepository Book { get; }
+    Task Commit();
 }
