@@ -17,14 +17,14 @@
                         <a asp-area="Users" asp-controller="Shop" asp-action="Index" class="menu_link">Shop</a>
                         <a asp-area="Users" asp-controller="Home" asp-action="AboutUs" class="menu_link">About us</a>
                         <a asp-area="Users" asp-controller="Home" asp-action="ContactUs" class="menu_link">Contact us</a>
+                        <partial name="_LoginPartial"/>
                     </nav>
-                    <partial name="_LoginPartial" />
                 </div>
                 <span class="header-icon"><i class="fa fa-bars"></i></span>
             </div>
         </div>
     </header>
-    <div>
+    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
