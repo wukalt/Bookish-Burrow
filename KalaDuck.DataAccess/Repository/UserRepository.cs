@@ -4,20 +4,20 @@ using KalaDuck.Models;
 
 namespace KalaDuck.DataAccess.Repository;
 
-public class BookRepository : Repository<Book>, IBookRepository
+public class UserRepository : Repository<ApplicationUser>, IUserRepository
 {
     private readonly ApplicationDbContext _context;
 
-    public BookRepository(ApplicationDbContext context) : base(context)
+    public UserRepository(ApplicationDbContext context) : base(context)
     {
         _context = context;
     }
 
-    public async Task Update(Book book)
+    public async Task Update(ApplicationUser user)
     {
         await Task.Run(() =>
         {
-            _context.Books.Update(book);
+            _context.ApplicationUsers.Update(user);
         });
     }
 }

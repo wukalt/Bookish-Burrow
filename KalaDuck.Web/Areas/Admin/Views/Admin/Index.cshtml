@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Book>
+
+@{
+    ViewData["Title"] = "صفحه اصلی";
+}
+@foreach (var x in Model)
+{
+    <p>@x.Title</p>
+}

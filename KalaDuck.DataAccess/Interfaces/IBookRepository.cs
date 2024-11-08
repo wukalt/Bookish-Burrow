@@ -4,5 +4,5 @@ namespace KalaDuck.DataAccess.Interfaces;
 
 public interface IBookRepository : IRepository<Book>
 {
-    void Update(Book book);
+    Task Update(Book book);
 }
