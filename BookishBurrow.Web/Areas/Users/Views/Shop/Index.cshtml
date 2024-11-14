@@ -1,0 +1,45 @@
+﻿@using BookishBurrow.Models
+@using BookishBurrow.Utility
+@model IEnumerable<Book>
+
+<main>
+    <section id="products">
+        <div class="container">
+            <div class="head">
+                <h2 class="products_title">All Products</h2>
+            </div>
+            <br />
+            <div class="products">
+                @foreach (var item in Model)
+                {
+                    <div class="product">
+                        <a href="" class="card">
+                            <div class="card_overlay">
+                                <div class="card_header">
+                                    <div class="card_header-text">
+                                        <h4 class="card_title">@item.Title</h4>
+                                        <div class="card_status">
+                                            <div class="card_status-sub">
+                                                <span class="price-sign"><i class="fa fa-dollar-sign"></i></span>
+                                                <p class="sub-price">@item.Price.GeneratePriceFormat()</p>
+                                            </div>
+                                            <div class="card_status-sub">
+                                                <span class="score-sign"><i class="fa fa-star"></i></span>
+                                                <p class="sub-score">@item.Point.GeneratePointFormat()</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="card-description">@item.Description.GenerateShortDescription()</p>
+                                <button class="card_addtocard">Add to Card</button>
+
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+            <a asp-controller="Shop" asp-action="Index" class="products_shop psfooter">Shop Now!</a>
+
+        </div>
+    </section>
+</main>

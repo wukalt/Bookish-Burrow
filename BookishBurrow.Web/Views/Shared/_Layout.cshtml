@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BookishBurrow.Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header">
+                <a asp-area="Users" asp-controller="Home" asp-action="Index" class="header_logo">Bookish Burrow</a>
+                <div class="header_menu">
+                    <nav class="menu">
+                        <a asp-area="Users" asp-controller="Shop" asp-action="Index" class="menu_link">Shop</a>
+                        <a asp-area="Users" asp-controller="Home" asp-action="AboutUs" class="menu_link">About us</a>
+                        <a asp-area="Users" asp-controller="Home" asp-action="ContactUs" class="menu_link">Contact us</a>
+                        <partial name="_LoginPartial"/>
+                    </nav>
+                </div>
+                <span class="header-icon"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer">
+                <div class="about">
+                    <a href="#" class="footer_logo">Bookish Burrow</a>
+                    <p class="about_txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi minus labore
+                        impedit id voluptate aperiam, tempore sunt dolorem porro repudiandae dicta pariatur sit animi
+                        distinctio corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quos quod,
+                        repellendus recusandae molestias assumenda libero voluptatibus esse. Dignissimos mollitia itaque
+                        fuga, repudiandae accusantium maiores quisquam.
+                    </p>
+                </div>
+                <div class="quickaccess">
+                    <h3 class="footer_title">Quick Access</h3>
+                    <a asp-area="Users" asp-controller="Shop" asp-action="Index" class="footer_quickaccess-link">Shop</a>
+                    <a asp-area="Users" asp-controller="Home" asp-action="AboutUs" class="footer_quickaccess-link">About us</a>
+                    <a asp-area="Users" asp-controller="Home" asp-action="ContactUs" class="footer_quickaccess-link">Contact us</a>
+                    <a asp-area="Users" asp-controller="Home" asp-action="Privacy" class="footer_quickaccess-link">Privacy</a>
+                </div>
+                <div class="contact">
+                    <h3 class="footer_title">Contact Us</h3>
+                    <a href="#" class="footer_contact-link">Instagram</a>
+                    <a href="#" class="footer_contact-link">Telegram</a>
+                    <a href="#" class="footer_contact-link">Tweeter</a>
+                    <a href="#" class="footer_contact-link">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2024 Bookish Burrow. All Rights Reserved.</div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
