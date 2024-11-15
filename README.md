@@ -16,3 +16,7 @@ git fork https://github.com/wukalt/Bookish-Burrow.git
 ```
 Update-Database
 ```
+
+## ⭐ Thanks To : 
+
+<a href="https://www.instagram.com/theweirdosheng/">`@theweirdosheng`</a> for their help with designing the template and logo.
